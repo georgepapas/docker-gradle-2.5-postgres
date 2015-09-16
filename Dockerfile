@@ -5,4 +5,6 @@ RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" >> /etc
 && apt-get update \
 && apt-get install -y postgresql-client
 
+RUN umask 0111
+
 WORKDIR /app
